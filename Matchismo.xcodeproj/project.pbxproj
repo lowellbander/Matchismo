@@ -81,8 +81,6 @@
 		36C89E261AC46AD1003E70FB /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
-				36C89E2B1AC46AD1003E70FB /* AppDelegate.h */,
-				36C89E2C1AC46AD1003E70FB /* AppDelegate.m */,
 				36C89E2E1AC46AD1003E70FB /* ViewController.h */,
 				36C89E2F1AC46AD1003E70FB /* ViewController.m */,
 				36C89E311AC46AD1003E70FB /* Main.storyboard */,
@@ -96,6 +94,8 @@
 		36C89E271AC46AD1003E70FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				36C89E2B1AC46AD1003E70FB /* AppDelegate.h */,
+				36C89E2C1AC46AD1003E70FB /* AppDelegate.m */,
 				36C89E281AC46AD1003E70FB /* Info.plist */,
 				36C89E291AC46AD1003E70FB /* main.m */,
 			);
@@ -412,6 +412,7 @@
 				36C89E491AC46AD1003E70FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36C89E4A1AC46AD1003E70FB /* Build configuration list for PBXNativeTarget "MatchismoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				36C89E4C1AC46AD1003E70FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
