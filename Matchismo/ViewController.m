@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "PlayingCardDeck.h"
+#import "Card.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -33,7 +35,12 @@
     } else {
         [sender setBackgroundImage:[UIImage imageNamed:@"cardFront"]
                           forState:UIControlStateNormal];
-        [sender setTitle:@"A♣️" forState:UIControlStateNormal];
+        
+        // not the right way to be doing this:
+        PlayingCardDeck *deck = [[PlayingCardDeck alloc] init];
+        Card *card = [deck drawRandomCard];
+        
+        [sender setTitle:card.contents forState:UIControlStateNormal];
     }
     ++self.flipCount;
     
