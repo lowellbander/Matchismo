@@ -9,10 +9,19 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (nonatomic) int flipCount;
 
 @end
 
 @implementation ViewController
+
+- (void)setFlipCount:(int)flipCount {
+    _flipCount = flipCount;
+    // keep the UI in sync:
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    NSLog(@"flipCount = %d", self.flipCount);
+}
 
 // Target action
 // IBAction is typedef'd to void. just a tool for Xcode
@@ -26,6 +35,7 @@
                           forState:UIControlStateNormal];
         [sender setTitle:@"A♣️" forState:UIControlStateNormal];
     }
+    ++self.flipCount;
     
 }
 
