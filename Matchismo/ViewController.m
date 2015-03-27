@@ -34,15 +34,18 @@
 // Target action
 // IBAction is typedef'd to void. just a tool for Xcode
 - (IBAction)touchCardButton:(UIButton *)sender {
-    Card* card = [self.deck drawRandomCard];
-    if (!card || [sender.currentTitle length]) {
+    if ([sender.currentTitle length]) {
         [sender setBackgroundImage:[UIImage imageNamed:@"cardBack"]
                           forState:UIControlStateNormal];
         [sender setTitle:@"" forState:UIControlStateNormal];
     } else {
-        [sender setBackgroundImage:[UIImage imageNamed:@"cardFront"]
-                          forState:UIControlStateNormal];
-        [sender setTitle:card.contents forState:UIControlStateNormal];
+        Card* card = [self.deck drawRandomCard];
+        if (card) {
+            [sender setBackgroundImage:[UIImage imageNamed:@"cardFront"]
+                              forState:UIControlStateNormal];
+            [sender setTitle:card.contents forState:UIControlStateNormal];
+        }
+        
     }
     ++self.flipCount;
 }
